@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import redux from "./redux.png";
 
 function Navbar() {
   let items = useSelector((state) => state.cart);
@@ -13,7 +14,12 @@ function Navbar() {
         justifyContent: "space-between",
       }}
     >
-      <span className="logo">Rexux Store</span>
+      <span className="logo">
+        {/* Rexux Store */}
+        <a href="http://localhost:3001/">
+          <img src={redux} alt="prodImg"></img>
+        </a>
+      </span>
       <div>
         <Link className="navLink" to="/">
           Home
